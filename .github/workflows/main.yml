@@ -1,4 +1,4 @@
-name: TOOLBOXLAP- LiteManager
+name: TECHNOVISION - LiteManager
 
 on:
   workflow_dispatch:
@@ -6,16 +6,16 @@ on:
 jobs:
   build:
     name: Start Building...
-    runs-on: windows-2019
+    runs-on: windows-2025
     timeout-minutes: 9999
     
     steps:
       - name: Downloading & Installing Essentials
         run: |
-          Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tollboxlap09/tollboxlap09/refs/heads/main/Downloads.bat" -OutFile "Downloads.bat"
+          Invoke-WebRequest -Uri “https://gitlab.com/chamod12/lm_win-10_github_rdp/-/raw/main/Downloads.bat” -OutFile “Downloads.bat”
           cmd /c Downloads.bat
 
-      - name: TOOLBOXLAP
+      - name: TECHNOVISION 
         run: cmd /c show.bat
 
       - name: like and subscribe 
