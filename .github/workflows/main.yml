@@ -1,0 +1,22 @@
+name: TOOLBOXLAP- LiteManager
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Start Building...
+    runs-on: windows-2025
+    timeout-minutes: 9999
+    
+    steps:
+      - name: Downloading & Installing Essentials
+        run: |
+          Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tollboxlap09/tollboxlap09/refs/heads/main/Downloads.bat" -OutFile "Downloads.bat"
+          cmd /c Downloads.bat
+
+      - name: TOOLBOXLAP
+        run: cmd /c show.bat
+
+      - name: like and subscribe 
+        run: cmd /c loop.bat
