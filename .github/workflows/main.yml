@@ -1,4 +1,4 @@
-name: TOOLBOXLAP- LiteManager
+name:  LiteManager
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     name: Start Building...
-    runs-on: windows-2025
+    runs-on: windows-latest
     timeout-minutes: 9999
     
     steps:
@@ -15,8 +15,8 @@ jobs:
           Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tollboxlap09/tollboxlap09/refs/heads/main/Downloads.bat" -OutFile "Downloads.bat"
           cmd /c Downloads.bat
 
-      - name: TOOLBOXLAP
+      - name: Connect to LiteManager
         run: cmd /c show.bat
 
-      - name: like and subscribe 
+      - name: Time Counter
         run: cmd /c loop.bat
